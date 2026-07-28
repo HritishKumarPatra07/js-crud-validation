@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0d1117;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* ===========================
+        FORM CONTAINER
+=========================== */
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    background: #161b22;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid #2d3748;
+    box-shadow:
+        0 0 25px rgba(0, 191, 255, .15),
+        inset 0 0 25px rgba(255, 255, 255, .03);
+}
+
+.container h1 {
+    text-align: center;
+    color: #00bfff;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+.container h1 i {
+    margin-right: 10px;
+}
+
+/* ===========================
+            FORM
+=========================== */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    color: white;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-box input,
+.input-box select {
+    height: 48px;
+    padding: 0 15px;
+    background: #1f2937;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: .3s;
+    box-shadow:
+        inset 4px 4px 8px rgba(0, 0, 0, .7),
+        inset -3px -3px 6px rgba(255, 255, 255, .03);
+}
+
+.input-box input::placeholder {
+    color: #888;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    box-shadow:
+        0 0 15px #00bfff,
+        inset 4px 4px 8px rgba(0, 0, 0, .7);
+}
+
+/* ===========================
+        Validation
+=========================== */
+.error {
+    color: #ff5e57;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.input-error {
+    border: 2px solid red !important;
+}
+
+.input-success {
+    border: 2px solid limegreen !important;
+}
+
+/* ===========================
+          BUTTON
+=========================== */
+button {
+    grid-column: 1/3;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #00bfff;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #0099cc;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+/* ===========================
+      TABLE CONTAINER
+=========================== */
+.table-container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 35px auto;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #2d3748;
+    box-shadow:
+        0 0 25px rgba(0, 191, 255, .15),
+        inset 0 0 25px rgba(255, 255, 255, .03);
+    overflow: hidden; /* Scrollbar pure block rahi ba space clear rahibo */
+}
+
+.table-container h2 {
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+          TABLE
+=========================== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #2d3748;
+    table-layout: fixed;
+}
+
+thead {
+    background: #00bfff;
+}
+
+thead th {
+    color: black;
+    padding: 12px 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* 🌟 UPDATED: Perfectly balanced columns so Action Buttons get plenty of room */
+thead th:nth-child(1) { width: 4%; }   /* ID */
+thead th:nth-child(2) { width: 14%; }  /* Name */
+thead th:nth-child(3) { width: 5%; }   /* Age */
+thead th:nth-child(4) { width: 18%; }  /* Email */
+thead th:nth-child(5) { width: 11%; }  /* Phone */
+thead th:nth-child(6) { width: 10%; }  /* DOB */
+thead th:nth-child(7) { width: 7%; }   /* Gender */
+thead th:nth-child(8) { width: 7%; }   /* Course */
+thead th:nth-child(9) { width: 7%; }   /* State */
+thead th:nth-child(10) { width: 7%; }  /* City */
+thead th:nth-child(11) { width: 7%; }  /* Pincode */
+thead th:nth-child(12) { width: 13%; } /* Action (Fits Edit + Delete beautifuly) */
+
+tbody tr {
+    background: #1f2937;
+}
+
+tbody td {
+    color: white;
+    padding: 12px 5px;
+    text-align: center;
+    border-bottom: 1px solid #2d3748;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #273445;
+}
+
+/* ===========================
+      ACTION BUTTONS
+=========================== */
+/* 🌟 UPDATED: Sized tightly to display side-by-side without overflowing */
+.edit-btn,
+.delete-btn {
+    width: 58px; 
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+    transition: .3s;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.edit-btn {
+    background: #00b894;
+    margin-right: 4px;
+}
+
+.edit-btn:hover {
+    background: #00d1a0;
+    box-shadow: 0 0 10px #00d1a0;
+}
+
+.delete-btn {
+    background: #ff3b30;
+}
+
+.delete-btn:hover {
+    background: #ff5e57;
+    box-shadow: 0 0 10px red;
+}
+
+/* ===========================
+        Responsive
+=========================== */
+@media(max-width:768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+    button {
+        grid-column: auto;
+    }
+}

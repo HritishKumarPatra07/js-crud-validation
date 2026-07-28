@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            Student Management System
+
+        </h1>
+
+        <form id="registrationForm">
+
+            <!-- First Name -->
+
+            <div class="input-box">
+
+                <label>Name</label>
+
+                <input type="text" id="firstName" placeholder="Enter Your Name">
+
+                <span class="error" id="firstNameError"></span>
+
+            </div>
+
+            <!-- Age -->
+
+            <div class="input-box">
+
+                <label>Age</label>
+
+                <input type="number" id="age" placeholder="Enter Age">
+
+                <span class="error" id="ageError"></span>
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="input-box">
+
+                <label>Email</label>
+
+                <input type="email" id="email" placeholder="Enter Email">
+
+                <span class="error" id="emailError"></span>
+
+            </div>
+
+            <!-- Phone -->
+
+            <div class="input-box">
+
+                <label>Phone</label>
+
+                <input type="number" id="phone" placeholder="Enter Phone Number">
+
+                <span class="error" id="phoneError"></span>
+
+            </div>
+
+            <!-- DOB -->
+
+            <div class="input-box">
+
+                <label>Date of Birth</label>
+
+                <input type="date" id="dob">
+
+                <span class="error" id="dobError"></span>
+
+            </div>
+
+            <!-- Gender -->
+
+            <div class="input-box">
+
+                <label>Gender</label>
+
+                <select id="gender">
+
+                    <option value="">Select Gender</option>
+
+                    <option value="Male">Male</option>
+
+                    <option value="Female">Female</option>
+
+                    <option value="Other">Other</option>
+
+                </select>
+
+                <span class="error" id="genderError"></span>
+
+            </div>
+
+            <!-- Course -->
+
+            <div class="input-box">
+
+                <label>Course</label>
+
+                <select id="course">
+
+                    <option value="">Select Course</option>
+
+                    <option>BCA</option>
+
+                    <option>BBA</option>
+
+                    <option>B.Sc</option>
+
+                    <option>BA</option>
+
+                    <option>B.Com</option>
+
+                </select>
+
+                <span class="error" id="courseError"></span>
+
+            </div>
+
+            <!-- State -->
+
+            <div class="input-box">
+
+                <label>State</label>
+
+                <select id="state">
+
+                    <option value="">Select State</option>
+
+                    <option value="Odisha">Odisha</option>
+
+                    <option value="West Bengal">West Bengal</option>
+
+                    <option value="Bihar">Bihar</option>
+
+                </select>
+
+                <span class="error" id="stateError"></span>
+
+            </div>
+
+            <!-- City -->
+
+            <div class="input-box">
+
+                <label>City</label>
+
+                <select id="city" disabled>
+
+               
+                </select>
+
+                <span class="error" id="cityError"></span>
+
+            </div>
+
+            <!-- Pincode -->
+
+            <div class="input-box">
+
+                <label>Pincode</label>
+
+                <input type="number" id="pincode" placeholder="Enter Pincode">
+
+                <span class="error" id="pincodeError"></span>
+
+            </div>
+
+            <button type="submit" id="submitbtn" data-action="subm">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Student
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Student Records</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Age</th>
+
+                    <th>Email</th>
+
+                    <th>Phone</th>
+
+                    <th>DOB</th>
+
+                    <th>Gender</th>
+
+                    <th>Course</th>
+
+                    <th>State</th>
+
+                    <th>City</th>
+
+                    <th>Pincode</th>
+
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
